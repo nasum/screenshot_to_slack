@@ -1,0 +1,18 @@
+{
+  "name": "screenshot_to_slack",
+  "version": "1.0.0",
+  "main": "./src/main/index.js",
+  "repository": "https://github.com/nasum/screenshot_to_slack.git",
+  "author": "nasum <tomato.wonder.life@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "electron": "electron ./"
+  },
+  "devDependencies": {
+    "electron-packager": "^8.5.2",
+    "electron-prebuilt": "^1.4.13"
+  },
+  "dependencies": {
+    "slack-node": "^0.1.8"
+  }
+}
