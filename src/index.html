@@ -23,36 +23,11 @@
         margin: 5px;
       }
     </style>
-    <script type="text/javascript">
-      var request = require('request');
-
-      function screenShot(){
-        let remote = require('electron').remote
-        remote.getCurrentWindow().capturePage(function handleCapture (img) {
-          remote.require('fs').writeFile("hoge", img.toPng(), function(){
-            console.log(img.toPng())
-            postSlack(img.toPng())
-          })
-        })
-      }
-
-      function postSlack(img){
-        var Slack = require('slack-node');
-        slack = new Slack();
-        slack.setWebhook("");
-        slack.webhook({
-          channel: "#general",
-          username: "webhookbot",
-          text: img,
-          attachments: img
-        }, function(err, response) {
-          console.log(response);
-        });
-      }
-    </script>
+    <script type="text/javascript" src="./browser/index.js" ></script>
   </head>
   <body style="-webkit-app-region: drag">
     <div class='main'>
+      <video src=""></video>
       <footer>
         <button onclick="screenShot()">
           Shot

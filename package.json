@@ -13,6 +13,6 @@
     "electron-prebuilt": "^1.4.13"
   },
   "dependencies": {
-    "slack-node": "^0.1.8"
+    "@slack/client": "^3.8.1"
   }
 }
